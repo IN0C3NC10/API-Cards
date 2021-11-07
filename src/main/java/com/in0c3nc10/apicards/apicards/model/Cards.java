@@ -37,7 +37,7 @@ public class Cards {
         return name;
     }
     public void setName(String name) {
-        this.name = name;
+        this.name = name.toUpperCase();
     }
     public String getLv() {
         return lv;
@@ -49,19 +49,19 @@ public class Cards {
         return archetype;
     }
     public void setArchetype(String archetype) {
-        this.archetype = archetype;
+        this.archetype = archetype.toUpperCase();
     }
     public String getType() {
         return type;
     }
     public void setType(String type) {
-        this.type = type;
+        this.type = type.toUpperCase();
     }
     public String getAttribute() {
         return attribute;
     }
     public void setAttribute(String attribute) {
-        this.attribute = attribute;
+        this.attribute = attribute.toUpperCase();
     }
     public String getAtk() {
         return atk;

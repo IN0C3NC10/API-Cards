@@ -12,4 +12,5 @@ public interface CardsService {
     Flux<Cards> findAll();
     Mono<Cards> findById(String id);
     Mono<Cards> save(Cards cards);
+    Mono<Void> delete(String id);
 }

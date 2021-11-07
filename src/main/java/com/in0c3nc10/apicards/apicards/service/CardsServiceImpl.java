@@ -29,5 +29,10 @@ public class CardsServiceImpl implements CardsService{
     public Mono<Cards> save(Cards cards) {
         return cr.save(cards);
     }
+
+    @Override
+    public Mono<Void> delete(String id) {
+        return cr.deleteById(id);
+    }
     
 }

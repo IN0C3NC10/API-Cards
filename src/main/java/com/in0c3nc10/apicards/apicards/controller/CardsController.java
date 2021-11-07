@@ -4,6 +4,7 @@ import com.in0c3nc10.apicards.apicards.model.Cards;
 import com.in0c3nc10.apicards.apicards.service.CardsService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,5 +31,10 @@ public class CardsController {
     @PostMapping(value="/cards/")
     public Mono<Cards> save(Cards cards) {
         return service.save(cards);
+    }
+
+    @DeleteMapping(value="/cards/{id}")
+    public Mono<Void> delete(@PathVariable String id) {
+        return service.delete(id);
     }
 }

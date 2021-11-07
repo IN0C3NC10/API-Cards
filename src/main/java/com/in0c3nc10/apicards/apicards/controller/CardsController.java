@@ -18,6 +18,8 @@ public class CardsController {
     @Autowired
     CardsService service;
 
+    // ..abaixo segue a requisição e a url a qual ele espera, e para qual método (na Service) cada um direciona
+
     @GetMapping(value = "/cards")
     public Flux<Cards>getCards(){
         return service.findAll();
